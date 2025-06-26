@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Aqua Safari</title>
+    <meta name="description"
+        content="Explore stunning photos and videos of Kerala's backwaters. Our gallery showcases houseboats, shikara rides, and the natural beauty of Alleppey.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Gallery | Aqua Safari">
+    <meta property="og:description" content="Experience the visual journey of Kerala's backwaters through our gallery.">
+    <meta property="og:image" content="https://yourdomain.com/static/images/Gallery.jpg">
+    <meta property="og:url" content="https://yourdomain.com/gallery">
+    <meta property="og:type" content="website">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/gallery.css">
+    <style>
+        /* Additional styles for category filtering */
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            padding: 8px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .category-btn.active {
+            background-color: #0e5a5f;
+            color: white;
+        }
+
+        .category-btn:hover {
+            background-color: #0e5a5f;
+            color: white;
+        }
+
+        .gallery-item {
+            display: none;
+            /* Initially hide all items */
+        }
+
+        .gallery-item.show {
+            display: block;
+            /* Show items with this class */
+        }
+
+        .video-card {
+            display: none;
+            /* Initially hide all video cards */
+        }
+
+        .video-card.show {
+            display: block;
+            /* Show video cards with this class */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="Aqua Safari Logo"> </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./gallery.html" class="active">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Payment.html">Payment</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <header style="background: linear-gradient(rgba(14, 90, 95, 0.7), rgba(14, 90, 95, 0.075)), 
+                url('../static/images/Gallery.jpg') no-repeat center/cover;" class="gallery-header">
+        <div class="container">
+            <h1>Aqua Safari Gallery</h1>
+            <p>Immerse yourself in the beauty of Kerala's backwaters through our visual journey</p>
+        </div>
+    </header>
+
+    <!-- Photo Gallery -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Photo Collection</h2>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="images">Images</button>
+                <button class="filter-btn" data-filter="videos">Videos</button>
+            </div>
+
+            <!-- New category filter buttons -->
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All Categories</button>
+                <button class="category-btn" data-category="shikara">Shikara Boat</button>
+                <button class="category-btn" data-category="kayaking">Kayaking</button>
+                <button class="category-btn" data-category="houseboat">Houseboats</button>
+                <button class="category-btn" data-category="speedboat">Speed Boats</button>
+                <button class="category-btn" data-category="other">Other</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Shikara Boat Images -->
+                <div class="gallery-item" data-category="images shikara">
+                    <img src="static/images/galleryimg/shikara1.jpg" alt="Shikara boat in backwaters" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images shikara">
+                    <img src="static/images/galleryimg/shikara2.jpg" alt="Traditional shikara boat ride" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images shikara">
+                    <img src="static/images/galleryimg/shikara3.jpg" alt="Shikara boat at sunset" loading="lazy">
+                </div>
+
+                <!-- Kayaking Images -->
+                <div class="gallery-item" data-category="images kayaking">
+                    <img src="static/images/galleryimg/kayak1.jpg" alt="Kayaking through narrow canals" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images kayaking">
+                    <img src="static/images/galleryimg/kayak2.jpg" alt="Group kayaking adventure" loading="lazy">
+                </div>
+
+
+                <!-- Houseboat Images -->
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat.jpg" alt="Luxury houseboat on backwaters"
+                        loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat1.jpg" alt="Houseboat interior" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat2.jpg" alt="Houseboat at golden hour" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat3.jpg" alt="Traditional Kerala houseboat"
+                        loading="lazy">
+                    <img src="static/images/galleryimg/houseboat4.jpg" alt="Luxury houseboat on backwaters"
+                        loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat5.jpg" alt="Houseboat interior" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat6.jpg" alt="Houseboat at golden hour" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images houseboat">
+                    <img src="static/images/galleryimg/houseboat7.jpg" alt="Traditional Kerala houseboat"
+                        loading="lazy">
+                </div>
+
+                <!-- Speed Boat Images -->
+                <div class="gallery-item" data-category="images speedboat">
+                    <img src="static/images/galleryimg/speedboat1.jpg" alt="Speed boat ride" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="images speedboat">
+                    <img src="static/images/galleryimg/speedboat2.jpg" alt="Speed boat adventure" loading="lazy">
+                </div>
+
+                <!-- Additional Images (you can categorize these as needed) -->
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_13.png" alt="Decorated shikara boat" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_14.png" alt="Kayaking through palm trees" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_15.png" alt="Houseboat dining area" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_16.png" alt="Speed boat with spray" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_17.png" alt="Shikara boat with flowers" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_18.png" alt="Kayaking at sunrise" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_19.png" alt="Houseboat bedroom" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_20.png" alt="Speed boat tour" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_21.png" alt="Shikara boat with family" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_22.png" alt="Kayaking through nature" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_23.png" alt="Houseboat kitchen" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_24.png" alt="Speed boat excitement" loading="lazy">
+                </div>
+                <div class="gallery-item" data-category="other">
+                    <img src="static/images/galleryimg/gallery_25.png" alt="Romantic shikara ride" loading="lazy">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="video-section" id="videos-section">
+        <div class="container">
+            <h2 class="section-title">Video Experiences</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 50px;">Watch our featured videos to
+                experience the magic of Kerala's backwaters</p>
+
+            <div class="video-grid">
+                <!-- Shikara Boat Videos -->
+                <div class="video-card" data-category="videos shikara">
+                    <div class="video-thumbnail">
+                        <img src="./static/videos/prev2.png" alt="Shikara boat tour video thumbnail" loading="lazy">
+                        <div class="play-icon" data-video="../static/videos/vid1.mp4">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Shikara Boat Tour</h3>
+                        <p>Experience the tranquility of traditional shikara ride</p>
+                        <div class="video-duration">
+                            <i class="far fa-clock"></i> 2:45 min
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card" data-category="videos shikara">
+                    <div class="video-thumbnail">
+                        <img src="./static/videos/goldenhr.png" alt="Shikara boat sunset cruise video thumbnail"
+                            loading="lazy">
+                        <div class="play-icon" data-video="../static/videos/goldenhour.mp4">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Sunset Shikara Cruise</h3>
+                        <p>Experience the magical golden hour on a traditional Shikara boat</p>
+                        <div class="video-duration">
+                            <i class="far fa-clock"></i> 3:15 min
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card" data-category="videos shikara">
+                    <div class="video-thumbnail">
+                        <img src="./static/videos/prev1.png"
+                            alt="Traditional Shikara boat backwater tour video thumbnail" loading="lazy">
+                        <div class="play-icon" data-video="../static/videos/vid2.mp4">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Traditional Shikara Tour</h3>
+                        <p>Explore Kerala's serene backwaters on a classic Shikara boat</p>
+                        <div class="video-duration">
+                            <i class="far fa-clock"></i> 5:10 min
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speed Boat Videos -->
+                <div class="video-card" data-category="videos speedboat">
+                    <div class="video-thumbnail">
+                        <img src="./static/images/speedboat.jpg" alt="Speed boat thrill video thumbnail" loading="lazy">
+                        <div class="play-icon" data-video="./static/videos/speedboat1.mp4">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Speed Boat Thrill</h3>
+                        <p>Exciting speed boat ride through backwaters</p>
+                        <div class="video-duration">
+                            <i class="far fa-clock"></i> 2:30 min
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Aqua Safari</div>
+                    <p><strong>Note:</strong> Hotel and taxi services are arranged through partner providers. Payments
+                        for these services are made directly to the service providers.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/services.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div>
+                        Chungam Pallathurthy,<br>
+                        Near Pallathurthy Outpost,<br>
+                        2 km from Alappuzha Bus Stop,<br>
+                        Alappuzha - 688001,<br>
+                        Kerala, India<br>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+91 70128 43921<br></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>dileeshkumar08@gmail.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Open daily<br>6:00 AM - 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aqua Safari. All rights reserved. | Designed with <i class="fas fa-heart"
+                        style="color: var(--accent);"></i> by <a
+                        href="https://www.linkedin.com/in/async-era-68411636b/"> AsyncEra Team</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Overlay for Images -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="">
+        </div>
+        <div class="lightbox-nav">
+            <div class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></div>
+            <div class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal">
+        <span class="video-close">&times;</span>
+        <div class="video-modal-content">
+            <video controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const videoCards = document.querySelectorAll('.video-card');
+        const videoSection = document.getElementById('videos-section');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Handle gallery items filtering
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || filter === 'images') {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Handle video section filtering
+                if (filter === 'all' || filter === 'videos') {
+                    videoSection.style.display = 'block';
+                } else {
+                    videoSection.style.display = 'none';
+                }
+            });
+        });
+
+        // Category Filter Functionality
+        const categoryBtns = document.querySelectorAll('.category-btn');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all category buttons
+                categoryBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const category = this.getAttribute('data-category');
+
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const itemCategories = item.getAttribute('data-category').split(' ');
+
+                    if (category === 'all' || itemCategories.includes(category)) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+
+                // Filter video cards
+                videoCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-category').split(' ');
+
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.classList.add('show');
+                    } else {
+                        card.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Initialize - show all items by default
+        document.addEventListener('DOMContentLoaded', function () {
+            galleryItems.forEach(item => item.classList.add('show'));
+            videoCards.forEach(card => card.classList.add('show'));
+        });
+
+        // Lightbox functionality for images
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox-content img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let currentImageIndex = 0;
+        const allGalleryImages = Array.from(galleryImages);
+
+        galleryImages.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                currentImageIndex = index;
+                lightboxImg.src = this.src;
+                lightboxImg.alt = this.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function showImage(index) {
+            if (index < 0) index = allGalleryImages.length - 1;
+            if (index >= allGalleryImages.length) index = 0;
+
+            currentImageIndex = index;
+            lightboxImg.src = allGalleryImages[index].src;
+            lightboxImg.alt = allGalleryImages[index].alt;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            showImage(currentImageIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showImage(currentImageIndex + 1);
+        });
+
+        lightboxClose.addEventListener('click', function () {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            // Arrow keys navigation
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    showImage(currentImageIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    showImage(currentImageIndex + 1);
+                }
+            }
+        });
+
+        // Video Modal functionality
+        const videoModal = document.querySelector('.video-modal');
+        const videoPlayer = document.querySelector('.video-modal video');
+        const videoClose = document.querySelector('.video-close');
+        const playIcons = document.querySelectorAll('.play-icon');
+
+        playIcons.forEach(icon => {
+            icon.addEventListener('click', function () {
+                const videoSrc = this.getAttribute('data-video');
+                videoPlayer.src = videoSrc;
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Play the video when modal opens
+                setTimeout(() => {
+                    videoPlayer.play();
+                }, 300);
+            });
+        });
+
+        videoClose.addEventListener('click', function () {
+            videoModal.classList.remove('active');
+            videoPlayer.pause();
+            videoPlayer.currentTime = 0;
+            document.body.style.overflow = '';
+        });
+
+        videoModal.addEventListener('click', function (e) {
+            if (e.target === videoModal) {
+                videoModal.classList.remove('active');
+                videoPlayer.pause();
+                videoPlayer.currentTime = 0;
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Set active link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === window.location.pathname) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

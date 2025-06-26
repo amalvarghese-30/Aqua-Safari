@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Aqua Safari</title>
+    <meta name="description"
+        content="Aqua Safari offers premium boat tours in Kerala. We also coordinate taxi services and accommodation through trusted partners.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Services | Aqua Safari">
+    <meta property="og:description" content="Experience Kerala backwaters with our premium boating services">
+    <meta property="og:image" content="https://yourdomain.com/static/images/services-hero.jpg">
+    <meta property="og:url" content="https://yourdomain.com/services">
+    <meta property="og:type" content="website">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/service.css">
+    <script src="./static/js/services.js"></script>
+    <style>
+        /* Additional styles for better organization */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-category {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .service-category h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0e5a5f;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .service-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #0e5a5f;
+        }
+
+        .partner-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #f8d347;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .partner-note {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 3px solid #f8d347;
+        }
+
+        .partner-note h4 {
+            margin-top: 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="Aqua Safari Logo"> </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html" class="active">Services</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Payment.html">Payment</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Our Premium Boating Experiences</h1>
+            <p>Explore Kerala's backwaters with our diverse range of boating options</p>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 50px;">Aqua Safari specializes in authentic
+                backwater experiences. We also coordinate taxi services and accommodation through trusted local
+                partners.</p>
+
+            <div class="important-note">
+                <h4><i class="fas fa-exclamation-triangle"></i> Important Weather Notice</h4>
+                <p>Due to safety concerns, our boat services will not operate during severe weather conditions including
+                    floods, cyclones, or heavy storms. In such cases, advance payments will be fully refunded.
+                    We prioritize customer safety above all else.</p>
+            </div>
+
+            <!-- Boat Services Section -->
+            <div class="service-category">
+                <h3>Boat Services</h3>
+                <div class="services-container">
+                    <!-- Shikara Boat Service -->
+                    <div class="package-card">
+                        <div class="package-info">
+                            <h3>Shikara Boat Rides</h3>
+                            <div class="price">Price varies by season</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Traditional Kerala canopy boat</li>
+                                <li><i class="fas fa-check"></i> Sunset and sunrise cruises</li>
+                                <li><i class="fas fa-check"></i> Guided tour through village life</li>
+                                <li><i class="fas fa-check"></i> Expert local boatmen</li>
+                                <li><i class="fas fa-check"></i> Photography stops included</li>
+                            </ul>
+                            <a href="./contact.html" class="btn">Book Boat Ride</a>
+                        </div>
+                    </div>
+
+                    <!-- Houseboat Service -->
+                    <div class="package-card">
+                        <div class="package-info">
+                            <h3>Houseboat Stays</h3>
+                            <div class="price">Price varies by season</div>
+
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Overnight backwater experience</li>
+                                <li><i class="fas fa-check"></i> AC & Non-AC options available</li>
+                                <li><i class="fas fa-check"></i> Includes Kerala meals</li>
+                                <li><i class="fas fa-check"></i> 1-3 bedroom configurations</li>
+                                <li><i class="fas fa-check"></i> Sunset cruise included</li>
+                            </ul>
+                            <a href="./contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Kayaking Service -->
+                    <div class="package-card">
+                        <div class="package-info">
+                            <h3>Kayaking Adventures</h3>
+                            <div class="price">Price varies by season</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 2-hour guided kayak tours</li>
+                                <li><i class="fas fa-check"></i> Explore narrow canals</li>
+                                <li><i class="fas fa-check"></i> Small group sizes</li>
+                                <li><i class="fas fa-check"></i> Safety equipment provided</li>
+                                <li><i class="fas fa-check"></i> Morning and evening slots</li>
+                            </ul>
+                            <a href="./contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Speedboat Service -->
+                    <div class="package-card">
+                        <div class="package-info">
+                            <h3>Speedboat Rides</h3>
+                            <div class="price">Price varies by season</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Thrilling backwater experience</li>
+                                <li><i class="fas fa-check"></i> 30-60 minute rides</li>
+                                <li><i class="fas fa-check"></i> Safety briefing included</li>
+                                <li><i class="fas fa-check"></i> Life jackets provided</li>
+                                <li><i class="fas fa-check"></i> Great for groups</li>
+                            </ul>
+                            <a href="./contact.html" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner Services Section -->
+            <div class="service-category">
+                <h3>Partner Services</h3>
+                <div class="services-container">
+                    <!-- Taxi Service -->
+                    <div class="package-card">
+                        <div class="partner-badge">Partner Service</div>
+                        <div class="package-info">
+                            <h3>Taxi Coordination</h3>
+                            <div class="price">Price varies by vehicle type</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> AC and non-AC vehicles</li>
+                                <li><i class="fas fa-check"></i> Airport transfers</li>
+                                <li><i class="fas fa-check"></i> Local and long-distance trips</li>
+                                <li><i class="fas fa-check"></i> English speaking drivers</li>
+                                <li><i class="fas fa-check"></i> 24/7 availability</li>
+                            </ul>
+                            <div class="partner-note">
+                                <h4>Note:</h4>
+                                <p>Taxi services provided by our trusted partners. Payments made directly to the taxi
+                                    operator. Prices vary based on vehicle type and distance.</p>
+                            </div>
+                            <a href="./contact.html" class="btn">Arrange Taxi</a>
+                        </div>
+                    </div>
+
+                    <!-- Rooms for Stay -->
+                    <div class="package-card">
+                        <div class="partner-badge">Partner Service</div>
+                        <div class="package-info">
+                            <h3>Accommodation Coordination</h3>
+                            <div class="price">Price varies by property</div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Wide range of options</li>
+                                <li><i class="fas fa-check"></i> Backwater view properties</li>
+                                <li><i class="fas fa-check"></i> Authentic Kerala stays</li>
+                                <li><i class="fas fa-check"></i> Various budget options</li>
+                                <li><i class="fas fa-check"></i> Traditional Kerala breakfast</li>
+                            </ul>
+                            <div class="partner-note">
+                                <h4>Note:</h4>
+                                <p>Accommodation provided by partner hotels/resorts. Prices vary based on property and
+                                    season. Payments made directly to the property.</p>
+                            </div>
+                            <a href="./contact.html" class="btn">Arrange Stay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="section">
+        <div class="container">
+            <div class="service-details">
+                <div class="service-text">
+                    <h2>Shikara Boat Experience</h2>
+                    <p>Our traditional Shikara boats offer the most authentic way to explore Kerala's famous backwaters.
+                        These beautifully crafted wooden boats provide a peaceful and scenic journey through the
+                        palm-fringed canals.</p>
+                    <ul>
+                        <li>Handcrafted from premium wood with colorful canopies</li>
+                        <li>Comfortable seating with cushions and backrests</li>
+                        <li>Experience authentic village life along the waterways</li>
+                        <li>Birdwatching and photography tours available</li>
+                        <li>Experienced boatmen who know the waterways intimately</li>
+                    </ul>
+                    <a href="./contact.html" class="btn">Customize Your Boat Trip</a>
+                </div>
+                <div class="service-text">
+                    <h2>Houseboat Experience</h2>
+                    <p>Our traditional Kerala houseboats (kettuvallams) offer the ultimate backwater experience. These
+                        floating villas
+                        provide comfortable overnight stays with modern amenities while maintaining authentic Kerala
+                        architecture.</p>
+                    <ul>
+                        <li>Handcrafted from premium wood and coir</li>
+                        <li>Spacious bedrooms with attached bathrooms</li>
+                        <li>Open lounge area with panoramic views</li>
+                        <li>Delicious Kerala cuisine prepared onboard</li>
+                        <li>Experienced crew including chef and captain</li>
+                    </ul>
+                </div>
+                <div class="service-text">
+                    <h2>Adventure Activities</h2>
+                    <p>For those seeking more active experiences, we offer kayaking and speedboat rides that let you
+                        explore the
+                        backwaters from different perspectives.</p>
+                    <ul>
+                        <li>Guided kayak tours through narrow canals</li>
+                        <li>Safety briefing and equipment provided</li>
+                        <li>Thrilling speedboat rides on open waters</li>
+                        <li>Small group sizes for personalized attention</li>
+                        <li>Combination packages available</li>
+                    </ul>
+                </div>
+                <div class="service-text">
+                    <h2>Travel Coordination Services</h2>
+                    <p>While Aqua Safari specializes in backwater experiences, we're happy to coordinate your complete
+                        travel needs through our trusted local partners.</p>
+                    <ul>
+                        <li>Airport pickups and drop-offs</li>
+                        <li>Multi-day taxi packages with knowledgeable drivers</li>
+                        <li>Clean and comfortable accommodation options</li>
+                        <li>Combination packages (boat + taxi + stay)</li>
+                        <li>24/7 customer support</li>
+                    </ul>
+
+                    <div class="partner-note">
+                        <h4>Important Information:</h4>
+                        <p>Taxi and accommodation services are provided by third-party operators. Aqua Safari
+                            coordinates these services but payments for taxis and accommodation are made directly to the
+                            service providers. Prices vary based on season, vehicle type, and property selection.</p>
+                    </div>
+
+                    <a href="./contact.html" class="btn">Plan Your Complete Trip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I book a Shikara boat ride?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can book directly through our website, by calling our reservation number, or through
+                        WhatsApp. We recommend booking at least 24 hours in advance, especially during peak season.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do your taxi and accommodation services work?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We coordinate with trusted local partners for taxi and accommodation services. When you book
+                        through us, we'll connect you with the service provider, but payments are made directly to them.
+                        We ensure quality service through our partner network.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is your cancellation policy for bad weather?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Your safety is our priority. In case of severe weather conditions (floods, cyclones, heavy
+                        storms),
+                        boat services will be canceled and advance payments will be fully refunded. We monitor weather
+                        conditions
+                        closely and will notify you in advance if any changes are needed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can you arrange airport pickup?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We can coordinate airport transfers through our trusted taxi partners. Please provide your
+                        flight details when booking, and we'll arrange your pickup.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer package deals?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer attractive packages that combine boat rides with taxi services and accommodation.
+                        Contact us with your travel plans and we'll create a customized itinerary for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Aqua Safari</div>
+                    <p>Specializing in authentic backwater experiences in Kerala. Taxi and accommodation services are
+                        coordinated through trusted partners.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="./contact.html.html">Contact Us</a></li>
+                        <li><a href="/services.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div>
+                        Chungam Pallathurthy,<br>
+                        Near Pallathurthy Outpost,<br>
+                        2 km from Alappuzha Bus Stop,<br>
+                        Alappuzha - 688001,<br>
+                        Kerala, India<br>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div><a href="https://wa.me/917012843921">+91 70128 43921</a><br></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>dileeshkumar08@gmail.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Open daily<br>6:00 AM - 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aqua Safari. All rights reserved. | Designed with <i class="fas fa-heart"
+                        style="color: var(--accent);"></i> by <a
+                        href="https://www.linkedin.com/in/async-era-68411636b/"> AsyncEra Team</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Set active link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === window.location.pathname) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Aqua Safari - Kerala Backwater Tours",
+      "description": "Authentic Shikara boat experiences in Alappuzha, Kerala.",
+      "image": "https://yourwebsite.com/static/images/boat.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Pallathurthy Outpost",
+        "addressLocality": "Alappuzha",
+        "postalCode": "688001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91 7012843921",
+      "url": "https://yourwebsite.com"
+    }
+    </script>
+
+</body>
+
+</html>

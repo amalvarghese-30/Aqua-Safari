@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aqua Safari offers premium backwater experiences in Kerala with shikara boat tours, comfortable stays, and reliable transportation services">
+    <title>Aqua Safari</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <a href="/">
+                        <img src="/static/images/logo.png" alt="Aqua Safari Logo"> </a> </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Payment.html">Payment</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Kerala's Enchanting Backwaters</h1>
+            <p>Experience the serene beauty of Alappuzha with our Shikara tours, houseboat stays, kayaking adventures
+                and speedboat
+                rides</p>
+            <a href="contact.html" class="btn">Book Your Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="../static/images/about.jpg" alt="About Aqua Safari" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>About Aqua Safari</h2>
+                    <p>Aqua Safari offers authentic Shikara boat tours through the serene backwaters of Alappuzha
+                        (Alleppey), Kerala. Our
+                        traditional Kerala Shikara boats provide the perfect vantage point to experience the unique
+                        beauty of Kerala's
+                        waterways in comfort and style.</p>
+                    <p>Our guided tours take you through scenic canals and open backwaters, showcasing local village
+                        life, picturesque
+                        landscapes, and excellent photography spots. During the journey, we stop at traditional toddy
+                        shops where you can
+                        experience authentic Kerala cuisine and culture at your leisure.</p>
+                    <a href="/about" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+
+                    <div class="contact-info">
+                        <h4>Contact Us</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 70128 43921, +91 85898 58552 </span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>dileeshkumar08@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Near Pallathurthy Outpost, Alappuzha - 688001,, Kerala, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h3>Expert Local Guides</h3>
+                    <p>Our native guides possess intimate knowledge of Alappuzha's waterways, sharing hidden gems and
+                        cultural insights you won't find in guidebooks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Tours</h3>
+                    <p>We're committed to sustainable tourism with eco-friendly boats and practices that preserve
+                        Kerala's
+                        delicate backwater ecosystem.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-signs"></i>
+                    </div>
+                    <h3>Authentic Local Experiences</h3>
+                    <p>We stop at traditional toddy shops along the backwaters where you can experience authentic Kerala
+                        cuisine and culture at your own pace.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Enjoy tailored experiences with flexible itineraries designed around your interests and schedule
+                        for
+                        a truly memorable journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="section offer-section">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="offer-container">
+                <div class="offer-video">
+                    <video poster="../static/videos/Screenshot 2025-06-08 131427.png" autoplay loop muted playsinline
+                        webkit-playsinline>
+                        <source src="../static/videos/goldenhour.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Custom video controls -->
+                    <div class="video-controls">
+                        <button class="control-btn play-btn" aria-label="Play/Pause">
+                            <i class="fas fa-play"></i>
+                            <i class="fas fa-pause" style="display: none;"></i> </button>
+                        <button class="control-btn mute-btn muted" aria-label="Mute/Unmute">
+                            <i class="fas fa-volume-high"></i>
+                            <i class="fas fa-volume-xmark" style="display: none;"></i> </button>
+                    </div>
+                </div>
+                <div class="offer-content">
+                    <h3>Experience the Magic of Kerala Backwaters</h3>
+                    <p>Our carefully curated boat tours offer you an unforgettable journey through the picturesque
+                        backwaters of Kerala. Glide through tranquil waters, witness local life along the banks, and
+                        immerse yourself in the natural beauty of this unique ecosystem.</p>
+
+                    <div class="tour-plan">
+                        <h4>Tour Highlights</h4>
+                        <ul>
+                            <li>3-4 hour private shikara cruise through Alappuzha's backwaters, lakes & canals</li>
+                            <li>Journey through picturesque village canals with traditional bridges</li>
+                            <li>Stop at authentic toddy shops for Kerala's famous local cuisine</li>
+                            <li>Sunset viewing from prime photography spots (evening tours)</li>
+                            <li>Guided tour of waterside villages and their vibrant daily life</li>
+                            <li>Multiple dedicated photography stops at scenic locations</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Boats & Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="../static/images/boat.jpg" alt="Traditional Shikara" loading="lazy">
+                    <h3>Shikara Boats</h3>
+                    <p>Traditional canopy boats for peaceful backwater exploration</p>
+                </div>
+                <div class="service-card">
+                    <img src="./static/images/houseboat.jpg" alt="Luxury Houseboat" loading="lazy">
+                    <h3>Houseboats</h3>
+                    <p>Overnight stays with modern amenities</p>
+                </div>
+                <div class="service-card">
+                    <img src="./static/images/kayaking.jpg" alt="Kayaking" loading="lazy">
+                    <h3>Kayaking</h3>
+                    <p>Guided tours through narrow canals</p>
+                </div>
+                <div class="service-card">
+                    <img src="./static/images/speedboat.jpg" alt="Speedboat" loading="lazy">
+                    <h3>Speedboats</h3>
+                    <p>Thrilling rides on open waters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">Glimpse of Our Tours</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../static/images/gallery1.jpg" alt="Backwater view" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../static/images/gallery2.jpg" alt="Boat interior" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../static/images/gallery3.jpg" alt="Sunset view" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../static/images/gallery4.jpg" alt="Local village" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../static/images/gallery5.jpg" alt="Bird watching" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../static/images/gallery6.jpg" alt="Traditional food" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <section style="padding: 70px;">
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.052789701968!2d76.3621867!3d9.4894144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMjknMjEuOSJOIDc2wrAyMSc1My4xIkU!5e0!3m2!1sen!2sin!4v1712345678901"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <div class="testimonial-carousel">
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div id="testimonialSlides">
+                    <!-- Review 1 -->
+                    <div class="testimonial-slide active">
+                        <p>Our sunset cruise was absolutely magical! The guide knew all the best spots for photos and
+                            shared fascinating stories about local life. The toddy shop stop was a highlight - authentic
+                            Kerala food at its best.</p>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-author">Sarah Johnson, London, UK</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="testimonial-slide">
+                        <p>We booked the photography tour and it exceeded all expectations. Our guide took us to hidden
+                            canals we never would have found on our own. The shikara boat was comfortable and the
+                            service was impeccable.</p>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-author">Rajiv Menon, Chennai, India</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="testimonial-slide">
+                        <p>The backwaters of Kerala have been on my bucket list for years, and Aqua Safari made it
+                            unforgettable. Their eco-friendly approach and knowledgeable guides made us feel good about
+                            supporting responsible tourism.</p>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-author">Michael Tanaka, Tokyo, Japan</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="testimonial-slide">
+                        <p>We were hesitant about booking a tour, but so glad we did! The personalized attention made
+                            all the difference. The team arranged a special anniversary surprise with flowers on the
+                            boat. Truly memorable!</p>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-author">Priya & Arjun, Mumbai, India</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="testimonial-slide">
+                        <p>The birdwatching tour was exceptional! Our guide had an incredible eye for spotting rare
+                            species. We saw kingfishers, eagles, and even a few otters. The peaceful morning cruise was
+                            worth every rupee.</p>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-author">Thomas Wilson, Sydney, Australia</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <div class="carousel-indicator active" data-index="0"></div>
+                    <div class="carousel-indicator" data-index="1"></div>
+                    <div class="carousel-indicator" data-index="2"></div>
+                    <div class="carousel-indicator" data-index="3"></div>
+                    <div class="carousel-indicator" data-index="4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Aqua Safari</div>
+                    <p>Experience the magic of Kerala's backwaters with our premium boat tours from Chungam,
+                        Pallathurthy. We offer authentic experiences showcasing the natural beauty and cultural richness
+                        of Alappuzha district.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/services.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div>
+                        Chungam Pallathurthy,<br>
+                        Near Pallathurthy Outpost,<br>
+                        2 km from Alappuzha Bus Stop,<br>
+                        Alappuzha - 688001,<br>
+                        Kerala, India<br>
+
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+91 70128 43921<br></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>dileeshkumar08@gmail.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Open daily<br>6:00 AM - 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aqua Safari. All rights reserved. | Designed with <i class="fas fa-heart"></i> by
+                    <a href="https://www.linkedin.com/in/async-era-68411636b/"> AsyncEra Team</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Custom video controls functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('.offer-video video');
+            const playBtn = document.querySelector('.play-btn');
+            const pauseIcon = playBtn.querySelector('.fa-pause');
+            const playIcon = playBtn.querySelector('.fa-play');
+            const muteBtn = document.querySelector('.mute-btn');
+            const volumeHighIcon = muteBtn.querySelector('.fa-volume-high');
+            const volumeMuteIcon = muteBtn.querySelector('.fa-volume-xmark');
+
+            // Set video to autoplay on load
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+
+            // Play/Pause button functionality
+            playBtn.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'inline-block';
+                } else {
+                    video.pause();
+                    playIcon.style.display = 'inline-block';
+                    pauseIcon.style.display = 'none';
+                }
+            });
+
+            // Mute/Unmute button functionality
+            muteBtn.addEventListener('click', function () {
+                if (video.muted) {
+                    video.muted = false;
+                    muteBtn.classList.remove('muted');
+                    muteBtn.classList.add('unmuted');
+                } else {
+                    video.muted = true;
+                    muteBtn.classList.remove('unmuted');
+                    muteBtn.classList.add('muted');
+                }
+            });
+
+            // Update button state based on video status
+            video.addEventListener('play', function () {
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'inline-block';
+            });
+
+            video.addEventListener('pause', function () {
+                playIcon.style.display = 'inline-block';
+                pauseIcon.style.display = 'none';
+            });
+
+            video.addEventListener('volumechange', function () {
+                if (video.muted) {
+                    muteBtn.classList.remove('unmuted');
+                    muteBtn.classList.add('muted');
+                } else {
+                    muteBtn.classList.remove('muted');
+                    muteBtn.classList.add('unmuted');
+                }
+            });
+        });
+
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Current slide index
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+
+            // Auto-rotate interval
+            let rotateInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+
+            function updateIndicators(index) {
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // Function to show a specific slide
+            function showSlide(index) {
+                if (index >= slides.length) {
+                    currentSlide = 0;
+                } else if (index < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = index;
+                }
+
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === currentSlide) {
+                        slide.classList.add('active');
+                    }
+                });
+
+                updateIndicators(currentSlide);
+
+                // Reset auto-rotation timer
+                clearInterval(rotateInterval);
+                rotateInterval = setInterval(() => {
+                    showSlide(currentSlide + 1);
+                }, 5000);
+            }
+
+            // Navigation buttons
+            document.querySelector('.prev-btn').addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+            });
+
+            document.querySelector('.next-btn').addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+            });
+
+            // Indicator click handlers
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    showSlide(index);
+                });
+            });
+        });
+
+        // Lightbox functionality for gallery
+        document.addEventListener('DOMContentLoaded', function () {
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox-content img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    lightboxImg.src = this.src;
+                    lightboxImg.alt = this.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            lightboxClose.addEventListener('click', function () {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Set active link based on path
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/917012843921" aria-label="Contact us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</body>
+
+</html>

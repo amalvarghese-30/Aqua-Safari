@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Secure payment options for Aqua Safari bookings. UPI, bank transfer, and other payment methods available">
+    <title>Payment | Aqua Safari</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/payment.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="Aqua Safari Logo"> </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Payment.html">Payment</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Hero -->
+    <section class="payment-hero">
+        <div class="container">
+            <h1>Payment Information</h1>
+            <p>Secure and convenient payment options for your booking</p>
+        </div>
+    </section>
+
+    <!-- Payment Content -->
+    <section class="section">
+        <div class="container">
+            <div class="payment-container">
+                <div class="payment-instructions">
+                    <h2>Booking & Payment Process</h2>
+                    <p>Thank you for choosing Aqua Safari for your backwater experience. To confirm your booking, please
+                        follow the payment instructions below.</p>
+
+                    <h3>Booking Information</h3>
+                    <p>We operate Shikara boats for your comfort and enjoyment. Due to high demand, we
+                        recommend booking early to secure your preferred date.</p>
+
+                    <div class="payment-methods">
+                        <h3>Payment Methods</h3>
+
+                        <div class="method">
+                            <h4><i class="fas fa-mobile-alt"></i> UPI Payment (Recommended)</h4>
+                            <p>Scan the QR code with any UPI app (Google Pay, PhonePe, Paytm, etc.) to make instant
+                                payment.</p>
+                            <p>After payment, please WhatsApp the screenshot to <span class="highlight">
+                                    +91 70128 43921</span> for confirmation.</p>
+                        </div>
+
+                        <!-- <div class="method">
+                            <h4><i class="fas fa-university"></i> Bank Transfer</h4>
+                            <p>You can transfer the amount directly to our bank account:</p>
+                            <div class="bank-details">
+                                <p><strong>Account Name:</strong> Dileesh Kumar</p>
+                                <p><strong>Account Number:</strong> ***********</p>
+                                <p><strong>Bank:</strong> Canara Bank</p>
+                                <p><strong>Branch:</strong> Alleppey Main Branch</p>
+                                <p><strong>IFSC Code:</strong> CNRB0000123</p>
+                            </div>
+                        </div> -->
+
+                        <div class="method">
+                            <h4><i class="fas fa-comment-dots"></i> Contact for Assistance</h4>
+                            <p>For any payment-related queries or booking assistance, feel free to contact us:</p>
+                            <a href="https://wa.me/917012843921" class="whatsapp-btn" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Now
+                            </a>
+                            <p style="margin-top: 15px;">Or call us at <span class="highlight">+91 70128 43921</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qr-container">
+                    <h3>Scan to Pay via UPI</h3>
+                    <div class="qr-watermark">
+                        <img src="./static/images/QR.jpg" alt="UPI QR Code">
+                    </div>
+                    <p>Use any UPI app to scan this code</p>
+                    <div class="bank-details">
+                        <p><strong>UPI ID:</strong> dileeshkumar08@oksbi</p>
+                        <p><strong>Mobile Number:</strong> +91 70128 43921</p>
+                    </div>
+                    <div class="qr-security-note">
+                        <p><strong>Security Note:</strong> Always verify the UPI ID matches
+                            <strong>dileeshkumar08@oksbi</strong> before making payment. Do not pay if the ID doesn't
+                            match.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Aqua Safari</div>
+                    <p>Experience the magic of Kerala's backwaters with our premium boat tours from Chungam,
+                        Pallathurthy. We offer authentic experiences showcasing the natural beauty and cultural richness
+                        of Alappuzha district.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/services.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div>
+                        Chungam Pallathurthy,<br>
+                        Near Pallathurthy Outpost,<br>
+                        2 km from Alappuzha Bus Stop,<br>
+                        Alappuzha - 688001,<br>
+                        Kerala, India<br>
+
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+91 70128 43921<br></div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>dileeshkumar08@gmail.com</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Open daily<br>6:00 AM - 7:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aqua Safari. All rights reserved. | Designed with <i class="fas fa-heart"
+                        style="color: var(--accent);"></i> by <a
+                        href="https://www.linkedin.com/in/async-era-68411636b/"> AsyncEra Team</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Set active link based on path
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
